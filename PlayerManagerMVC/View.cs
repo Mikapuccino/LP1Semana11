@@ -25,5 +25,16 @@ namespace PlayerManagerMVC
 
             return int.Parse(Console.ReadLine());
         }
+
+        public PlayerOrder AskPlayerOrder()
+        {
+            Console.WriteLine("Player order");
+            Console.WriteLine($"{(int)PlayerOrder.ByScore}. Order by score");
+            Console.WriteLine($"{(int)PlayerOrder.ByName}. Order by name");
+            Console.WriteLine(
+                $"{(int)PlayerOrder.ByNameReverse}. Order by name (reverse)");
+
+            return Enum.Parse<PlayerOrder>(Console.ReadLine());
+        }
     }
 }
