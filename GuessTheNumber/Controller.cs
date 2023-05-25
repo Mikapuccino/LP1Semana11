@@ -32,7 +32,7 @@ namespace GuessTheNumber
                 view.CheckGuess(guess, targetNumber, attempts);
             }
 
-            Console.WriteLine("Thank you for playing Guess the Number!");
+            view.EndMessage();
         }
     }
 }

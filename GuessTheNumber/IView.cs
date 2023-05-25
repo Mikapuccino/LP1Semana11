@@ -9,5 +9,6 @@ namespace GuessTheNumber
     {
         void StartMessage();
         bool CheckGuess(int guess, int targetNumber, int attempts);
+        void EndMessage();
     }
 }

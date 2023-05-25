@@ -23,22 +23,27 @@ namespace GuessTheNumber
         public bool CheckGuess(int guess, int targetNumber, int attempts)
         {
             if (guess == targetNumber)
-                {
-                    Console.WriteLine(
-                        "Congratulations! You guessed the number correctly!");
-                    Console.WriteLine("Number of attempts: " + attempts);
-                    return true;
-                }
-                else if (guess < targetNumber)
-                {
-                    Console.WriteLine("Too low! Try again.");
-                    return false;
-                }
-                else
-                {
-                    Console.WriteLine("Too high! Try again.");
-                    return false;
-                }
+            {
+                Console.WriteLine(
+                    "Congratulations! You guessed the number correctly!");
+                Console.WriteLine("Number of attempts: " + attempts);
+                return true;
+            }
+            else if (guess < targetNumber)
+            {
+                Console.WriteLine("Too low! Try again.");
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("Too high! Try again.");
+                return false;
+            }
+        }
+
+        public void EndMessage()
+        {
+            Console.WriteLine("Thank you for playing Guess the Number!");
         }
     }
 }
