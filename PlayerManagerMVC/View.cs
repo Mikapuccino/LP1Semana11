@@ -36,5 +36,39 @@ namespace PlayerManagerMVC
 
             return Enum.Parse<PlayerOrder>(Console.ReadLine());
         }
+
+        public void InvalidOption()
+        {
+            Console.WriteLine("\nInvalid option! Press any key to continue...");
+            Console.ReadKey();
+            Console.WriteLine();
+        }
+
+        public void ListPlayers(IEnumerable<Player> playersToList)
+        {
+            foreach (Player p in playersToList)
+            {
+                Console.WriteLine("Name: " + p.Name);
+                Console.WriteLine("Score: " + p.Score);
+                Console.WriteLine("-");
+            }
+        }
+
+        public (string, int) InsertPlayer()
+        {
+            Console.Write("Name of player: ");
+            string newName = Console.ReadLine();
+            Console.Write("Score of player: ");
+            int newScore = int.Parse(Console.ReadLine());
+
+            return (newName, newScore);
+        }
+
+        public int AskForMinimumScore()
+        {
+            Console.WriteLine();
+            Console.Write("Minimum score?: ");
+            return int.Parse(Console.ReadLine());
+        }
     }
 }
