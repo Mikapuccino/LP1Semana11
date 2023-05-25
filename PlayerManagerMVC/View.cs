@@ -54,7 +54,7 @@ namespace PlayerManagerMVC
             }
         }
 
-        public (string, int) InsertPlayer()
+        public (string, int) AskForPlayer()
         {
             Console.Write("Name of player: ");
             string newName = Console.ReadLine();
