@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GuessTheNumber
 {
-    public class View
+    public class View : IView
     {
         
     }
