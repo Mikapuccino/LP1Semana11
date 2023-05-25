@@ -44,6 +44,11 @@ namespace GuessTheNumber
             }
 
             Console.WriteLine("Thank you for playing Guess the Number!");
+
+            Controller controller = new Controller();
+            IView view = new View(controller);
+
+            controller.Run(view);
         }
     }
 }
