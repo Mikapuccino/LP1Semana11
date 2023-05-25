@@ -38,7 +38,7 @@ namespace PlayerManagerMVC
                         break;
                     case 2:
                         SortPlayers();
-                        view.ShowPlayers(playerList);
+                        view.ListPlayers(playerList);
                         break;
                     case 3:
                         SortPlayers();
@@ -77,13 +77,13 @@ namespace PlayerManagerMVC
             switch (playerOrder)
             {
                 case PlayerOrder.ByScore:
-                    list.Sort();
+                    playerList.Sort();
                     break;
                 case PlayerOrder.ByName:
-                    list.Sort(compareByName);
+                    playerList.Sort(compareByName);
                     break;
                 case PlayerOrder.ByNameReverse:
-                    list.Sort(compareByNameReverse);
+                    playerList.Sort(compareByNameReverse);
                     break;
             }
         }
@@ -94,7 +94,7 @@ namespace PlayerManagerMVC
 
             Player p = new Player(name, score);
 
-            list.Add(p);
+            playerList.Add(p);
         }
 
         private void ShowPlayersWithScore()
@@ -109,7 +109,7 @@ namespace PlayerManagerMVC
 
         private IEnumerable<Player> GetPlayersWithScoreGreaterThan(int minScore)
         {
-            foreach (Player p in list)
+            foreach (Player p in playerList)
             {
                 if (p.Score > minScore)
                     yield return p;
