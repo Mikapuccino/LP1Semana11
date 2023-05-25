@@ -19,8 +19,7 @@ namespace GuessTheNumber
             int attempts = 0;
             bool guessedCorrectly = false;
 
-            Console.WriteLine("Welcome to Guess the Number!");
-            Console.WriteLine("I have chosen a number between 1 and 100.");
+            view.StartMessage();
 
             // Game loop
             while (!guessedCorrectly)
