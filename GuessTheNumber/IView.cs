@@ -8,5 +8,6 @@ namespace GuessTheNumber
     public interface IView
     {
         void StartMessage();
+        bool CheckGuess(int guess, int targetNumber, int attempts);
     }
 }

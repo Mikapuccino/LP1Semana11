@@ -28,21 +28,8 @@ namespace GuessTheNumber
                 guess = Convert.ToInt32(Console.ReadLine());
                 attempts++;
 
-                if (guess == targetNumber)
-                {
-                    Console.WriteLine(
-                        "Congratulations! You guessed the number correctly!");
-                    Console.WriteLine("Number of attempts: " + attempts);
-                    guessedCorrectly = true;
-                }
-                else if (guess < targetNumber)
-                {
-                    Console.WriteLine("Too low! Try again.");
-                }
-                else
-                {
-                    Console.WriteLine("Too high! Try again.");
-                }
+                guessedCorrectly = 
+                view.CheckGuess(guess, targetNumber, attempts);
             }
 
             Console.WriteLine("Thank you for playing Guess the Number!");
