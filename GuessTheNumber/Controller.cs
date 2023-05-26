@@ -7,14 +7,9 @@ namespace GuessTheNumber
 {
     public class Controller
     {
-        public void Run(IView view)
+        public void Run(IView view, Model model)
         {
-            // Generate a random number
-            Random random = new Random();
-
-            // Generate a number between 1 and 100
-            int targetNumber = random.Next(1, 101);
-
+            int targetNumber = model.Initialize();
             int guess;
             int attempts = 0;
             bool guessedCorrectly = false;
